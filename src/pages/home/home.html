@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button icon-only menu-toggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title texte-center>
+      TEMPO IFPI - OEIRAS
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <ion-item *ngFor="let dado of tempo" >
+        <ion-grid>
+            <ion-row>
+              <ion-col col-3 style="background-color:black">
+                <ion-thumbnail item-start>
+                  <img src="assets/imgs/temperatuta.png">
+                  <img src="assets/imgs/pressao.png">
+                  <img src="assets/imgs/hum.png">
+                  <img src="assets/imgs/vento.png">
+                  <img src="assets/imgs/ag.png">
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col col-9 style="background-color:aqua">
+                <h2>{{dado.id}} - Data/hora da leitura</h2>
+                <h2>{{ dado.data_leitura }} - {{ dado.hora_leitura }}</h2>
+                <h2>Temperatura interna</h2>
+                <p> {{ dado.temperatura_int }}</p>
+                <h2>Temperatura externa</h2>
+                <p> {{ dado.temperatura_ext }}</p>
+                <h2>Pressão </h2>
+                <p> {{ dado.pressao }}</p>
+                <h2>Volume de chuva </h2>
+                <p> {{ dado.volume_chuva }}</p>
+                <h2>Velocidade do vento </h2>
+                <p> {{ dado.velocidade_vento}}</p>
+              </ion-col>
+            </ion-row>
+        </ion-grid>
+
+
+      
+    </ion-item>
+    <!-- <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/pressao.png">
+      </ion-thumbnail>
+      <h2>Pressão</h2>
+      <p> 1988</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/hum.png">
+      </ion-thumbnail>
+      <h2>Humidade</h2>
+      <p> 1988</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/vento.png">
+      </ion-thumbnail>
+      <h2>Vento</h2>
+      <p>Hayao Miyazaki • 1988</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/ag.png">
+      </ion-thumbnail>
+      <h2>Volume chuva</h2>
+      <p>Hayao Miyazaki • 1988</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item> -->
+  </ion-list>
+</ion-content>
